@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Модальные окна"
+})
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<section class="hero">
+				<div class='hero__container'>
+					<h1 class="hero__title _title"></h1>
+					<div class="hero__row">
+						<ol style="list-style-position: inside;">
+							<li style="margin-bottom: 20px;">
+								<a href="javascript:void(0);" data-popup="#popup">Оценка работы</a>
+							</li>
+							<li style="margin-bottom: 20px;">
+								<a href="javascript:void(0);" data-popup="#popupTwo">Оценка работы 2</a>
+							</li>
+							<li style="margin-bottom: 20px;">
+								<a href="javascript:void(0);" data-popup="#popupThree">Отправлена</a>
+							</li>
+							<li style="margin-bottom: 20px;">
+								<a href="javascript:void(0);" data-popup="#popupFour">Не отправлена</a>
+							</li>
+							<li style="margin-bottom: 20px;">
+								<a href="javascript:void(0);" data-popup="#popupProperty">Крупногабаритное имущество</a>
+							</li>
+							<li style="margin-bottom: 20px;">
+								<a href="javascript:void(0);" data-popup="#popupPropertyTwo">Крупногабаритное
+									имущество 2</a>
+							</li>
+							<li style="margin-bottom: 20px;">
+								<a href="javascript:void(0);" data-popup="#popupPropertyTree">Крупногабаритное
+									имущество 3</a>
+							</li>
+							<li style="margin-bottom: 20px;">
+								<a href="javascript:void(0);" data-popup="#popupDate">Календарь</a>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

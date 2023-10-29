@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Затопление и протечка"
+})
+
+<body>
+
+	<div class="wrapper">
+		<main class="page">
+			<div class="page__container">
+				<aside class="aside">
+					<div class="aside__body">
+						<a href="javascript:void(0);" class="aside__logo">
+							<img src="./img/alt.png" data-src="./img/aside/08.svg" alt="">
+						</a>
+						<nav class="aside__navigation">
+							<ul class="aside__list">
+								<li class="aside__item">
+									<a href="javascript:void(0);" class="aside__link"
+										style="--icon: url(../img/aside/01.svg);">Главная</a>
+								</li>
+								<li class="aside__item">
+									<a href="javascript:void(0);" class="aside__link js-aside-link _active"
+										style="--icon: url(../img/aside/02.svg);">Заявки</a>
+								</li>
+								<li class="aside__item">
+									<a href="javascript:void(0);" class="aside__link"
+										style="--icon: url(../img/aside/03.svg);">Финансы</a>
+								</li>
+								<li class="aside__item">
+									<a href="javascript:void(0);" class="aside__link"
+										style="--icon: url(../img/aside/04.svg);">Приборы учёта</a>
+								</li>
+								<li class="aside__item">
+									<a href="javascript:void(0);" class="aside__link"
+										style="--icon: url(../img/aside/05.svg);">Маркетплейсы</a>
+								</li>
+								<li class="aside__item">
+									<a href="javascript:void(0);" class="aside__link"
+										style="--icon: url(../img/aside/06.svg);">Обратная связь</a>
+								</li>
+								<li class="aside__item">
+									<a href="javascript:void(0);" class="aside__link"
+										style="--icon: url(../img/aside/07.svg);">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</aside>
+				<div class="page__content">
+					@@include('html/_header.htm',{})
+					<div class="page__inner">
+
+						<section class="choice">
+							<div class="choice__info">
+								<a href="javascript:void(0);" class="choice__back back back--link"
+									style="--icon: url(../img/icon/01.svg);">Назад</a>
+								<div class="choice__top">
+									<div class="choice__content">
+										<h1 class="choice__title _title">Затопление и протечка</h1>
+										<div class="choice__status"
+											style='--icon:url(../img/icon/11.svg); --color: #5F5F5F;'>
+											Открыта</div>
+									</div>
+								</div>
+								<div class="choice__description description-chioice">
+									<div class="description-chioice__title">Описание</div>
+									<div class="description-chioice__text">Lorem ipsum dolor sit amet consectetur. In
+										tincidunt cursus non ultricies fermentum ultricies enim et.Varius non ut mauris
+										nunc sollicitudin semper vitae.</div>
+								</div>
+							</div>
+							<div class="choice__row">
+								<div class="choice__column">
+									<h2 class="choice__column-title _title">Место</h2>
+									<div class="choice__column-items choice__column-items--four">
+										<dl class="choice__column-item">
+											<dt>Строение</dt>
+											<dd>13</dd>
+										</dl>
+										<dl class="choice__column-item">
+											<dt>Номер входа</dt>
+											<dd>1</dd>
+										</dl>
+										<dl class="choice__column-item">
+											<dt>Этаж</dt>
+											<dd>2</dd>
+										</dl>
+										<dl class="choice__column-item">
+											<dt>Офис</dt>
+											<dd>101</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="choice__column">
+									<h2 class="choice__column-title _title">Контакты</h2>
+									<div class="choice__column-items choice__column-items--two">
+										<div class="choice__column-item">
+											<div class="choice__column-label">ФИО</div>
+											<div class="choice__column-text">Петров Михаил Владимирович</div>
+										</div>
+										<div class="choice__column-item">
+											<div class="choice__column-label">Телефон</div>
+											<div class="choice__column-text">+7 999 805 706 37</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="choice__btns form__btns--fixed">
+								<button type="button" class="choice__btn btn btn--gray">Удалить заявку</button>
+							</div>
+						</section>
+						<section class="communication">
+							<div class="communication__body">
+								<div class="communication__title ">Жизненный цикл</div>
+								<form action="#" class="communication__form form">
+									<div class="form__item">
+										<label class="form__label">Введите текст</label>
+										<textarea class="form__textarea input"></textarea>
+									</div>
+									<fieldset class="form__fieldset form__fieldset--files">
+										<div class="form__files file-loader" data-type='files'>
+											<div class="file-loader__inner file-loader__inner--alt">
+												<div class="file-loader__row">
+													<div class="file-loader__item">
+														<button type="button"
+															class="form__btn btn btn--whte btn--whte-red">Отправить</button>
+													</div>
+													<div class="file-loader__item">
+														<input id="file-upload"
+															class="file-loader__input visually-hidden" type="file"
+															name="file" multiple>
+														<label class="label-upload label-upload--notexst"
+															for="file-upload" style='--icon:url(../img/icon/12.svg)'>
+														</label>
+													</div>
+												</div>
+												<div class="file-loader__files"></div>
+											</div>
+											<div class="file-loader__error"></div>
+										</div>
+									</fieldset>
+								</form>
+								<div class="communication__row">
+									<div class="communication__column">
+										<div class="communication__column-img">
+											<img src="./img/alt.png" data-src="./img/communication/01.png" alt="">
+										</div>
+										<div class="communication__column-info info-communication">
+											<div class="info-communication__title">Козырева Марина Владимировна</div>
+											<time datetime="6 сентября, 14:35" class="info-communication__time">6
+												сентября,
+												14:35</time>
+											<div class="info-communication__text">
+												Lorem ipsum dolor sit amet consectetur. In tincidunt Cursus non
+												ultricies.
+											</div>
+										</div>
+									</div>
+									<div class="communication__column">
+										<div class="communication__column-img">
+											<img src="./img/alt.png" data-src="./img/communication/02.png" alt="">
+										</div>
+										<div class="communication__column-info info-communication">
+											<div class="info-communication__title">МПЗ</div>
+											<time datetime="6 сентября, 14:35" class="info-communication__time">6
+												сентября,
+												14:30</time>
+											<div class="info-communication__text">
+												Заявка в работе
+											</div>
+										</div>
+									</div>
+									<div class="communication__column">
+										<div class="communication__column-img">
+											<img src="./img/alt.png" data-src="./img/communication/01.png" alt="">
+										</div>
+										<div class="communication__column-info info-communication">
+											<div class="info-communication__title">Новиков Андрей Валерьевич</div>
+											<time datetime="6 сентября, 14:35" class="info-communication__time">6
+												сентября,
+												13:35</time>
+											<div class="info-communication__text">
+												Lorem ipsum dolor sit amet consectetur. In tincidunt Cursus non
+												ultricies.
+											</div>
+										</div>
+									</div>
+									<div class="communication__column">
+										<div class="communication__column-img">
+											<img src="./img/alt.png" data-src="./img/communication/03.png" alt="">
+										</div>
+										<div class="communication__column-info info-communication">
+											<div class="info-communication__title">Заявка открыта</div>
+											<time datetime="6 сентября, 14:35" class="info-communication__time">5
+												сентября,
+												14:35</time>
+											<div class="info-communication__text">
+												Заявка создана
+											</div>
+										</div>
+									</div>
+									<div class="communication__column">
+										<div class="communication__column-img">
+											<img src="./img/alt.png" data-src="./img/communication/03.png" alt="">
+										</div>
+										<div class="communication__column-info info-communication">
+											<div class="info-communication__title">Заявка открыта</div>
+											<time datetime="6 сентября, 14:35" class="info-communication__time">5
+												сентября,
+												14:35</time>
+											<div class="info-communication__text">
+												Заявка создана
+											</div>
+										</div>
+									</div>
+									<div class="communication__column">
+										<div class="communication__column-img">
+											<img src="./img/alt.png" data-src="./img/communication/03.png" alt="">
+										</div>
+										<div class="communication__column-info info-communication">
+											<div class="info-communication__title">Заявка открыта</div>
+											<time datetime="6 сентября, 14:35" class="info-communication__time">5
+												сентября,
+												14:35</time>
+											<div class="info-communication__text">
+												Заявка создана
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

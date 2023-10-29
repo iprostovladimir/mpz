@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Вход"
+})
+
+<body>
+	<!-- УДАЛИТЬ, ЕСЛИ ЕСТЬ ЯВНЫЙ H1 -->
+	<h1 class="visually-hidden">
+		Вход
+	</h1>
+	<div class="wrapper">
+		@@include('html/_header-small.htm)
+		<main class="page">
+			<section class="start">
+				<div class='start__container'>
+					<div class="start__inner">
+						<div data-tabs data-tabs-animate="300" class="start__tabs">
+							<nav data-tabs-titles class="start__navigation">
+								<button type="button" class="start__title _tab-active">Вход</button>
+								<button type="button" class="start__title">Регистрация</button>
+							</nav>
+							<div data-tabs-body class="start__content">
+								<div class="start__body">
+									<form action="#" class="start__form form">
+										<div class="form__items">
+											<div class="form__item">
+												<label class="form__label">E-mail</label>
+												<input autocomplete="off" type="text" name="form[]"
+													data-error="Заполните поле" class="form__input input"
+													data-required="email" data-validate>
+											</div>
+											<div class="form__item">
+												<label class="form__label">Пароль</label>
+												<input autocomplete="off" type="text" name="form[]"
+													data-error="Заполните поле"
+													class="form__input form__viewpass input active" data-required
+													data-validate>
+											</div>
+										</div>
+										<div class="start__btns">
+											<button class="start__btn btn btn--red">
+												Войти
+											</button>
+											<a href="javascript:void(0);" class="start__link">Забыл пароль</a>
+										</div>
+									</form>
+								</div>
+								<div class="start__body">
+									<form action="#" class="start__form form">
+										<div class="form__items">
+											<div class="form__item">
+												<label class="form__label">ФИО</label>
+												<input autocomplete="off" type="text" name="form[]"
+													data-error="Заполните поле" class="form__input input" data-required
+													data-validate>
+											</div>
+											<div class="form__item">
+												<label class="form__label">E-mail</label>
+												<input autocomplete="off" type="text" name="form[]"
+													data-error="Заполните поле" class="form__input input"
+													data-required="email" data-validate>
+											</div>
+											<div class="form__item">
+												<label class="form__label">Пароль</label>
+												<input autocomplete="off" type="text" name="form[]"
+													data-error="Заполните поле"
+													class="form__input input form__viewpass input active" data-required
+													data-validate>
+											</div>
+											<div class="form__item">
+												<label class="form__label">Повторите пароль</label>
+												<input autocomplete="off" type="text" name="form[]"
+													data-error="Заполните поле"
+													class="form__input input form__viewpass input active" data-required
+													data-validate>
+											</div>
+										</div>
+										<div class="form__captcha">
+											<img src="./img/alt.png" data-src="./img/start/01.png" alt="">
+										</div>
+										<div class="start__btns">
+											<button class="start__btn btn btn--red">
+												Создать
+											</button>
+											<a href="javascript:void(0);" class="start__link">Забыл пароль</a>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

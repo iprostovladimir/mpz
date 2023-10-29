@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Проведение ремонтных работ"
+})
+
+<body>
+
+	<div class="wrapper">
+		<main class="page">
+			<div class="page__container">
+				<aside class="aside">
+					<div class="aside__body">
+						<a href="javascript:void(0);" class="aside__logo">
+							<img src="./img/alt.png" data-src="./img/aside/08.svg" alt="">
+						</a>
+						<nav class="aside__navigation">
+							<ul class="aside__list">
+								<li class="aside__item">
+									<a href="javascript:void(0);" class="aside__link"
+										style="--icon: url(../img/aside/01.svg);">Главная</a>
+								</li>
+								<li class="aside__item">
+									<a href="javascript:void(0);" class="aside__link js-aside-link _active"
+										style="--icon: url(../img/aside/02.svg);">Заявки</a>
+								</li>
+								<li class="aside__item">
+									<a href="javascript:void(0);" class="aside__link"
+										style="--icon: url(../img/aside/03.svg);">Финансы</a>
+								</li>
+								<li class="aside__item">
+									<a href="javascript:void(0);" class="aside__link"
+										style="--icon: url(../img/aside/04.svg);">Приборы учёта</a>
+								</li>
+								<li class="aside__item">
+									<a href="javascript:void(0);" class="aside__link"
+										style="--icon: url(../img/aside/05.svg);">Маркетплейсы</a>
+								</li>
+								<li class="aside__item">
+									<a href="javascript:void(0);" class="aside__link"
+										style="--icon: url(../img/aside/06.svg);">Обратная связь</a>
+								</li>
+								<li class="aside__item">
+									<a href="javascript:void(0);" class="aside__link"
+										style="--icon: url(../img/aside/07.svg);">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</aside>
+				<div class="page__content">
+					@@include('html/_header.htm',{})
+					<div class="page__inner">
+
+						<section class="choice">
+							<div class="choice__info">
+								<a href="javascript:void(0);" class="choice__back back back--link"
+									style="--icon: url(../img/icon/01.svg);">Назад</a>
+								<div class="choice__top">
+									<div class="choice__content">
+										<h1 class="choice__title _title">Проведение ремонтных работ</h1>
+										<div class="choice__text _text">Lorem ipsum dolor sit amet consectetur. In
+											tincidunt
+											cursus non ultricies fermentum ultricies enim et. Varius non ut mauris nunc
+											sollicitudin semper vitae.</div>
+									</div>
+								</div>
+
+							</div>
+							<form action="#" class="choice__form form">
+								<fieldset class="form__fieldset">
+									<div class="form__item">
+										<label class="form__label">Описание</label>
+										<textarea class="form__textarea input"></textarea>
+									</div>
+								</fieldset>
+								<fieldset class="form__fieldset form__fieldset--files">
+									<div class="form__files file-loader" data-type='files'>
+										<div class="file-loader__inner">
+											<div class="file-loader__row">
+												<input id="file-upload" class="file-loader__input visually-hidden"
+													type="file" name="file" multiple>
+												<label class="label-upload" for="file-upload"
+													style='--icon:url(../img/icon/12.svg)'>
+													Прикрепить файл
+												</label>
+												<div class="file-loader__text">Максимальный размер файла 20 MB</div>
+											</div>
+											<div class="file-loader__files"></div>
+										</div>
+										<div class="file-loader__error"></div>
+									</div>
+								</fieldset>
+								<fieldset class="form__fieldset">
+									<div class="form__title _title">Место</div>
+									<div class="form__row form__row--fourbig">
+										<div class="form__item">
+											<label class="form__label">Строение*</label>
+											<input autocomplete="off" type="text" name="form[]"
+												data-error="Заполните поле" class="form__input input" data-required
+												data-validate>
+										</div>
+										<div class="form__item">
+											<label class="form__label">Номер входа</label>
+											<input autocomplete="off" type="number" name="form[]"
+												data-error="Заполните поле" class="form__input input" data-required
+												data-validate>
+										</div>
+										<div class="form__item">
+											<label class="form__label">Этаж</label>
+											<input autocomplete="off" type="number" name="form[]"
+												data-error="Заполните поле" class="form__input input" data-required
+												data-validate>
+										</div>
+										<div class="form__item">
+											<label class="form__label">Офис</label>
+											<input autocomplete="off" type="number" name="form[]"
+												data-error="Заполните поле" class="form__input input" data-required
+												data-validate>
+										</div>
+									</div>
+								</fieldset>
+
+								<fieldset class="form__fieldset">
+									<div class="form__title _title">Контакты</div>
+									<div class="form__row">
+										<div class="form__item">
+											<label class="form__label">ФИО*</label>
+											<input autocomplete="off" type="text" name="form[]"
+												data-error="Заполните поле" class="form__input input" data-required
+												data-validate>
+										</div>
+										<div class="form__item">
+											<label class="form__label">Телефон*</label>
+											<input autocomplete="off" type="tel" name="form[]"
+												data-error="Заполните поле" class="form__input form__input-phone input"
+												data-required data-validate>
+										</div>
+									</div>
+								</fieldset>
+								<fieldset class="form__fieldset form__fieldset--desktop">
+									<div class="form__title _title">Время проведения</div>
+									<div class="form__row form__row--date" style='--icon:url(../img/icon/14.svg)'>
+										<div class="form__item" data-hasdatepicker>
+											<input data-datepicker autocomplete="off" type="text" name="form[]"
+												data-error="Ошибка" placeholder="Выберите дату" value="Выберите дату"
+												readonly class="input" id="datepicker">
+										</div>
+									</div>
+									<!-- <div class="datapicker__column" data-hasdatepicker>
+										<input data-datepicker autocomplete="off" type="text" name="form[]"
+											data-error="Ошибка" placeholder="" readonly class="input" id="datepicker">
+									</div> -->
+								</fieldset>
+								<fieldset class="form__fieldset form__fieldset--mobile">
+									<div class="form__title _title">Время проведения</div>
+									<div class="form__row form__row--date" style='--icon:url(../img/icon/14.svg)'>
+										<div class="form__item">
+											<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+												placeholder="Выберите дату" value="Выберите дату" readonly class="input"
+												data-popup="#popupDate">
+										</div>
+									</div>
+									<!-- <div class="datapicker__column" data-hasdatepicker>
+										<input data-datepicker autocomplete="off" type="text" name="form[]"
+											data-error="Ошибка" placeholder="" readonly class="input" id="datepicker">
+									</div> -->
+								</fieldset>
+								<fieldset class="form__fieldset">
+									<div class="form__title _title">Название организации</div>
+									<div class="form__row form__row--one">
+										<div class="form__item">
+											<label class="form__label">Название организации проводящее работы*</label>
+											<input autocomplete="off" type="text" name="form[]"
+												data-error="Заполните поле" class="form__input input" data-required
+												data-validate>
+										</div>
+									</div>
+								</fieldset>
+								<div class="form__btns form__btns--fixed">
+									<button type="button" class="form__btn btn btn--whte js-btn-validate">Создать
+										заявку</button>
+								</div>
+							</form>
+						</section>
+						<section class="communication"></section>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

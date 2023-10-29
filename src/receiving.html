@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Восстановление пароля"
+})
+
+<body>
+	<h1 class="visually-hidden">Восстановление пароля</h1>
+
+	<div class="wrapper">
+		@@include('html/_header-small.htm)
+		<main class="page">
+			<section class="start">
+				<div class='start__container'>
+					<div class="start__inner">
+						<h1 class="start__subtitle">Восстановление пароля</h1>
+						<form action="#" class="start__form form">
+							<div class="form__items">
+								<div class="form__item">
+									<label class="form__label">Введите код</label>
+									<input autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
+										class="form__input input" data-required data-validate>
+									<div class="form__text">На указанный e-mail было выслано письмо с кодом</div>
+								</div>
+							</div>
+							<div class="start__btns">
+								<button class="start__btn btn btn--red">
+									Далее
+								</button>
+								<a href="javascript:void(0);" class="start__link">Вспомнил пароль</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

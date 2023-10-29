@@ -1,0 +1,447 @@
+// body::after {
+//   content: "";
+//   background-color: rgba(0, 0, 0, 0.8);
+//   position: fixed;
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+//   opacity: 0;
+//   transition: opacity 0.8s ease 0s;
+//   pointer-events: none;
+//   z-index: 149;
+
+//   @media (max-width: $mobile) {
+//     background-color: rgba(0, 0, 0, 1);
+//   }
+// }
+// body.popup-show::after {
+//   opacity: 1;
+// }
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  //   padding: 30px 10px;
+  transition: visibility 0.8s ease 0s;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  @media (max-width: $mobile) {
+    background: var(--color-whte);
+    top: rem(0);
+  }
+
+  .popup__title {
+    margin-bottom: rem(0);
+
+    @media (max-width: $tablet) {
+      margin-bottom: rem(3);
+    }
+  }
+
+  .popup__number {
+    font-size: rem(24);
+    font-weight: 300;
+    line-height: rem(28); /* 116.667% */
+
+    @media (max-width: $tablet) {
+      font-size: rem(20);
+      line-height: rem(24); /* 120% */
+    }
+  }
+}
+.popup_show {
+  z-index: 150;
+  visibility: visible;
+  overflow: auto;
+  pointer-events: auto;
+}
+.popup_show .popup__content {
+  visibility: visible;
+  transform: scale(1);
+}
+.popup__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.popup__content {
+  visibility: hidden;
+  transform: scale(0);
+  transition: transform 0.3s ease 0s;
+  background-color: var(--color-whte);
+  width: 100%;
+  max-width: rem(457);
+
+  @media (max-width: $mobile) {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .lock & {
+    visibility: visible;
+  }
+}
+
+.popup__inner {
+  padding: rem(32) rem(44) rem(44);
+  @media (max-width: $mobile) {
+    padding: rem(32) rem(16) rem(44);
+  }
+  @media (min-width: $mobile) {
+    position: relative;
+  }
+}
+
+.popup__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: rem(20);
+  right: rem(20);
+
+  &::before {
+    content: "";
+    mask: var(--icon) center center/contain no-repeat;
+    -webkit-mask: var(--icon) center center/contain no-repeat;
+    --size: 26px;
+    width: var(--size);
+    height: var(--size);
+    background: #484848;
+    flex: 0 0 var(--size);
+  }
+}
+
+.popup__top {
+  margin-bottom: rem(32);
+
+  @media (max-width: $mobile) {
+    margin-bottom: rem(40);
+  }
+}
+
+.popup__form {
+}
+
+.popup__items {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  margin-bottom: rem(44);
+
+  @media (max-width: $mobile) {
+    margin-bottom: rem(53);
+  }
+}
+
+.popup__item {
+  position: relative;
+  input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    &:checked + .checkbox__label:before {
+      background: var(--color-alt);
+    }
+
+    &:checked + .checkbox__label {
+      color: var(--color-alt);
+    }
+  }
+  .checkbox__label {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    transition: all $time $tr 0s;
+    cursor: pointer;
+    &::before {
+      content: "";
+      mask: var(--icon) center center/contain no-repeat;
+      -webkit-mask: var(--icon) center center/contain no-repeat;
+      background: var(--color);
+      --size: 40px;
+      width: var(--size);
+      height: var(--size);
+      flex: 0 0 var(--size);
+      transition: all $time $tr 0s;
+    }
+
+    .checkbox__text {
+      font-size: rem(16);
+      font-weight: 300;
+      line-height: rem(24); /* 150% */
+      text-decoration: underline;
+    }
+  }
+}
+
+.popup__btns {
+  display: flex;
+  align-items: center;
+  gap: rem(12);
+  flex-wrap: wrap;
+}
+.popup__btn {
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+
+.popup__text {
+  font-size: rem(15);
+  font-weight: 300;
+  line-height: rem(24); /* 160% */
+  color: var(--color-primary);
+  margin-top: rem(12);
+
+  @media (max-width: $mobile) {
+    margin-top: rem(8);
+    font-size: rem(14);
+  }
+}
+
+.popup__row {
+  display: flex;
+  flex-direction: column;
+  gap: rem(48);
+}
+
+.popup__column-item {
+  position: relative;
+}
+
+.popup__column {
+}
+
+.popup__column-close {
+  cursor: pointer;
+  &::before {
+    content: "";
+    mask: var(--icon) center center/contain no-repeat;
+    -webkit-mask: var(--icon) center center/contain no-repeat;
+    background: var(--color-gry);
+    width: rem(12);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $tablet) {
+      width: rem(14);
+    }
+  }
+}
+
+.popup__column-top {
+  display: flex;
+  align-items: center;
+  gap: rem(30);
+  justify-content: space-between;
+  margin-bottom: rem(20);
+
+  @media (max-width: $tablet) {
+    margin-bottom: rem(30);
+  }
+}
+
+#popup {
+  .popup__content {
+    max-width: rem(397);
+  }
+}
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+
+.popup-property {
+  .popup__content {
+    max-width: rem(712);
+  }
+
+  .popup__inner {
+    padding: rem(38) rem(40) rem(40);
+    min-height: rem(640);
+
+    @media (min-width: $mobile) {
+      position: relative;
+    }
+
+    @media (max-width: $mobile) {
+      padding: rem(32) rem(16) rem(44);
+    }
+  }
+
+  .popup__column-title {
+    margin-bottom: rem(0);
+    font-size: rem(24);
+    font-weight: 300;
+    line-height: rem(28); /* 116.667% */
+
+    @media (max-width: $tablet) {
+      margin-bottom: rem(0);
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(20);
+      font-weight: 300;
+      line-height: rem(24); /* 120% */
+    }
+  }
+  .popup__btns {
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: rem(20) rem(40) rem(40);
+    background: var(--color-whte);
+
+    @media (max-width: $mobile) {
+      padding: rem(10) rem(16) rem(30);
+      position: fixed;
+      z-index: 5;
+    }
+  }
+
+  .popup__btn {
+    width: 100%;
+  }
+
+  .popup__form {
+    overflow: auto;
+
+    @media (min-width: $mobile) {
+      margin-right: rem(-10);
+      padding-right: rem(10);
+      height: rem(406);
+
+      &::-webkit-scrollbar {
+        height: 2px;
+        width: 2px;
+      }
+      &::-webkit-scrollbar-track {
+        background: #8585853b;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: var(--color-gry);
+      }
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: rem(80);
+    }
+
+    .popup__btns {
+      position: static;
+      padding: 0px 0px 0px 0px;
+      margin-top: rem(40);
+
+      @media (max-width: $mobile) {
+        margin-top: rem(48);
+      }
+      .popup__btn {
+        width: auto;
+      }
+    }
+  }
+
+  .popup__top {
+    margin-bottom: rem(48);
+
+    @media (max-width: $tablet) {
+      margin-bottom: rem(40);
+    }
+  }
+  .popup__btns--two {
+    gap: rem(28);
+    flex-wrap: nowrap;
+
+    @media (max-width: $mobile) {
+      gap: rem(12);
+    }
+  }
+}
+//========================================================================================================================================================
+
+.popup-date {
+  @media (min-width: $tablet) {
+    display: none;
+  }
+  .air-datepicker.-inline- {
+    position: static;
+    margin-top: rem(0);
+    margin-right: -16px;
+    margin-left: -16px;
+    width: calc(100% - rem(58));
+    border: none;
+    border-top: rem(1) solid #e4e4e4;
+    border-bottom: rem(1) solid #e4e4e4;
+    padding: rem(0) rem(45);
+  }
+
+  .air-datepicker-nav {
+    padding: 20px 0px 0px 0px;
+  }
+
+  .air-datepicker--content {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .form__item {
+    font-size: 0;
+    padding-bottom: 0;
+    border: none;
+    width: 100%;
+
+    .input {
+      font-size: 0;
+      padding-bottom: 0;
+      border: none;
+    }
+    &._active {
+      .air-datepicker.-inline- {
+        transform: translate(0, 0);
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  .form__fieldset {
+    margin-top: rem(0);
+  }
+
+  .form__row {
+    margin-top: rem(0);
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .popup__btns {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: rem(10) rem(16) rem(30);
+    background: var(--color-whte);
+  }
+}
+
+//========================================================================================================================================================

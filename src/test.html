@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Вход"
+})
+
+<body>
+	<!-- УДАЛИТЬ, ЕСЛИ ЕСТЬ ЯВНЫЙ H1 -->
+
+	<div class="wrapper">
+		<main class="page">
+			<section class="test">
+				<div class='test__container'>
+					<div class="test__title _title" style="margin-bottom: 40px; font-size: 32px;">Тест селектов</div>
+					<div class="test__row" data-selects>
+						<div class="select-primary" data-select="primary">
+							<div class="select-primary__title " style='margin-bottom: 30px;' data-select-title>
+								<div class="select-primary__value" style="--icon:url('../img/arrow-down.svg ')">Фильтр
+								</div>
+							</div>
+							<ul class="select-primary__list" hidden>
+								<li class="select-primary__item" style='margin-bottom: 40px;' data-target="paid">Платные
+								</li>
+								<li class="select-primary__item" style='margin-bottom: 40px;' data-target="category">
+									Категория заявки</li>
+								<li class="select-primary__item" style='margin-bottom: 40px;'>Статус</li>
+								<li class="select-primary__item" style='margin-bottom: 40px;'>Заявитель</li>
+								<li class="select-primary__item" style='margin-bottom: 40px;'>Создание</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<section class="datapicker">
+				<div class='datapicker__container'>
+					<div class="datapicker__title "></div>
+					<div class="datapicker__row">
+						<div class="datapicker__column" data-hasdatepicker>
+							<input data-datepicker autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+								placeholder="" readonly class="input" id="datepicker">
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<section class="inputFiles">
+				<div class='inputFiles__container'>
+					<div class="inputFiles__title _title"></div>
+					<div class="inputFiles__row">
+						<fieldset class="form__files file-loader" data-type='files'>
+							<div class="file-loader__inner">
+								<div class="file-loader__row">
+									<input id="file-upload" class="file-loader__input visually-hidden" type="file"
+										name="file" multiple>
+									<label class="label-upload" for="file-upload"
+										style='--icon:url(../img/icon/12.svg)'>
+										Прикрепить файл
+									</label>
+									<div class="file-loader__text">Максимальный размер файла 20 MB</div>
+								</div>
+								<div class="file-loader__files"></div>
+							</div>
+							<div class="file-loader__error"></div>
+						</fieldset>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+
+
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	<template id="selects-template">
+		<div class="select-item" data-select="paid">
+			<div class="select-primary__title" data-select-title>
+				<div class="select-item__value" style='--icon:url(../img/icons/arrow-down.svg)'>Платные</div>
+			</div>
+			<form action="#" class="select-item__list" hidden>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+							name="form[]">
+						<label for="c_1" class="checkbox__label"><span class="checkbox__text">Текст1</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="2"
+							name="form[]">
+						<label for="c_2" class="checkbox__label"><span class="checkbox__text">Текст2</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3"
+							name="form[]">
+						<label for="c_3" class="checkbox__label"><span class="checkbox__text">Текст3</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="4"
+							name="form[]">
+						<label for="c_4" class="checkbox__label"><span class="checkbox__text">Текст4</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="5"
+							name="form[]">
+						<label for="c_1" class="checkbox__label"><span class="checkbox__text">Текст</span></label>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="select-item" data-select="category">
+			<div class="select-primary__title" data-select-title>
+				<div class="select-item__value" style='--icon:url(../img/icons/arrow-down.svg)'>Категория</div>
+			</div>
+			<form action="#" class="select-item__list" hidden>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="11"
+							name="form[]">
+						<label for="c_1" class="checkbox__label"><span class="checkbox__text">Текст1</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="12"
+							name="form[]">
+						<label for="c_2" class="checkbox__label"><span class="checkbox__text">Текст2</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="13"
+							name="form[]">
+						<label for="c_3" class="checkbox__label"><span class="checkbox__text">Текст3</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="14"
+							name="form[]">
+						<label for="c_4" class="checkbox__label"><span class="checkbox__text">Текст4</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="15"
+							name="form[]">
+						<label for="c_1" class="checkbox__label"><span class="checkbox__text">Текст</span></label>
+					</div>
+				</div>
+			</form>
+		</div>
+	</template>
+	@@include('html/_js.htm',{})
+
+
+</body>
+
+</html>
