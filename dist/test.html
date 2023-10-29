@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Вход</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20231029203740">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<!-- УДАЛИТЬ, ЕСЛИ ЕСТЬ ЯВНЫЙ H1 -->
+
+	<div class="wrapper">
+		<main class="page">
+			<section class="test">
+				<div class='test__container'>
+					<div class="test__title _title" style="margin-bottom: 40px; font-size: 32px;">Тест селектов</div>
+					<div class="test__row" data-selects>
+						<div class="select-primary" data-select="primary">
+							<div class="select-primary__title " style='margin-bottom: 30px;' data-select-title>
+								<div class="select-primary__value" style="--icon:url('../img/arrow-down.svg ')">Фильтр
+								</div>
+							</div>
+							<ul class="select-primary__list" hidden>
+								<li class="select-primary__item" style='margin-bottom: 40px;' data-target="paid">Платные
+								</li>
+								<li class="select-primary__item" style='margin-bottom: 40px;' data-target="category">
+									Категория заявки</li>
+								<li class="select-primary__item" style='margin-bottom: 40px;'>Статус</li>
+								<li class="select-primary__item" style='margin-bottom: 40px;'>Заявитель</li>
+								<li class="select-primary__item" style='margin-bottom: 40px;'>Создание</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<section class="datapicker">
+				<div class='datapicker__container'>
+					<div class="datapicker__title "></div>
+					<div class="datapicker__row">
+						<div class="datapicker__column" data-hasdatepicker>
+							<input data-datepicker autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" readonly class="input" id="datepicker">
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<section class="inputFiles">
+				<div class='inputFiles__container'>
+					<div class="inputFiles__title _title"></div>
+					<div class="inputFiles__row">
+						<fieldset class="form__files file-loader" data-type='files'>
+							<div class="file-loader__inner">
+								<div class="file-loader__row">
+									<input id="file-upload" class="file-loader__input visually-hidden" type="file" name="file" multiple>
+									<label class="label-upload" for="file-upload" style='--icon:url(../img/icon/12.svg)'>
+										Прикрепить файл
+									</label>
+									<div class="file-loader__text">Максимальный размер файла 20 MB</div>
+								</div>
+								<div class="file-loader__files"></div>
+							</div>
+							<div class="file-loader__error"></div>
+						</fieldset>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+
+
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__inner">
+					<button data-close type="button" class="popup__close" style='--icon:url(../img/icon/13.svg)'></button>
+					<div class="popup__top">
+						<div class="popup__title _title">Оценка работы</div>
+						<div class="popup__text">
+						</div>
+					</div>
+					<form action="#" class="popup__form">
+						<div class="popup__items">
+							<div class="popup__item checkbox">
+								<input id="c_1" data-error="Ошибка" class="checkbox__input" type="radio" value="1" name="form[]" checked>
+								<label for="c_1" class="checkbox__label" style='--icon:url(../img/popup/01.svg); --color: #858585'><span class="checkbox__text">Отлично</span></label>
+							</div>
+							<div class="popup__item checkbox">
+								<input id="c_2" data-error="Ошибка" class="checkbox__input" type="radio" value="1" name="form[]">
+								<label for="c_2" class="checkbox__label" style='--icon:url(../img/popup/02.svg); --color: #858585'><span class="checkbox__text">Хорошо</span></label>
+							</div>
+							<div class="popup__item checkbox">
+								<input id="c_3" data-error="Ошибка" class="checkbox__input" type="radio" value="1" name="form[]">
+								<label for="c_3" class="checkbox__label" style='--icon:url(../img/popup/03.svg); --color: #858585'><span class="checkbox__text">Удовлетворительно</span></label>
+							</div>
+							<div class="popup__item checkbox">
+								<input id="c_4" data-error="Ошибка" class="checkbox__input" type="radio" value="1" name="form[]">
+								<label for="c_4" class="checkbox__label" style='--icon:url(../img/popup/04.svg); --color: #858585'><span class="checkbox__text">Плохо</span></label>
+							</div>
+						</div>
+						<div class="popup__btns">
+							<button type="button" class="popup__btn btn btn--red">Отправить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="popupTwo" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__inner">
+					<button data-close type="button" class="popup__close" style='--icon:url(../img/icon/13.svg)'></button>
+					<div class="popup__top">
+						<div class="popup__title _title">Оценка работы</div>
+						<div class="popup__text">
+							Делитесь мнением чаще. <br> Ваши отзывы и оценки полезны нам.
+						</div>
+					</div>
+					<div class="popup__btns">
+						<button type="button" class="popup__btn btn btn--red" data-close>Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="popupThree" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__inner">
+					<button data-close type="button" class="popup__close" style='--icon:url(../img/icon/13.svg)'></button>
+					<div class="popup__top">
+						<div class="popup__title _title">Заявка отправлена</div>
+						<div class="popup__number">Присвоен №133445</div>
+						<div class="popup__text">
+							Изменения статуса заявки будут отображаться в вашей истории заявок.
+						</div>
+					</div>
+					<div class="popup__btns">
+						<button type="button" class="popup__btn btn btn--red" data-close>Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="popupFour" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__inner">
+					<button data-close type="button" class="popup__close" style='--icon:url(../img/icon/13.svg)'></button>
+					<div class="popup__top">
+						<div class="popup__title _title">Ошибка</div>
+						<div class="popup__text">
+							Ваша заявка не была отправлена. Пожалуйста, попробуйте отправить заявку ещё раз.
+						</div>
+					</div>
+					<div class="popup__btns">
+						<button type="button" class="popup__btn btn btn--red" data-close>Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="popupProperty" aria-hidden="true" class="popup popup-property">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__inner">
+					<button data-close type="button" class="popup__close" style='--icon:url(../img/icon/13.svg)'></button>
+					<div class="popup__top">
+						<div class="popup__title _title">Крупногабаритное имущество</div>
+						<div class="popup__text">
+						</div>
+					</div>
+					<form action="#" class="popup__form ">
+						<div class="popup__row">
+							<div class="popup__column">
+								<div class="popup__column-top">
+									<div class="popup__column-title _title">1 имущество</div>
+									<button type="button" class="popup__column-close" style="--icon:url(../img/icon/13.svg)"></button>
+								</div>
+								<div class="popup__column-item form">
+									<div class="form__item">
+										<label class="form__label">Название</label>
+										<input autocomplete="off" type="text" name="form[]" data-error="Заполните поле" class="form__input input" data-required data-validate>
+										<div class="form__constructor">
+											<div class="form__quantity quantity">
+												<button type="button" class="quantity__button quantity__button_minus _active"></button>
+												<div class="quantity__input">
+													<input autocomplete="off" type="number" name="form[]" value="1">
+												</div>
+												<button type="button" class="quantity__button quantity__button_plus"></button>
+											</div>
+											<div class="form__value">Кол-во</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="popup__btns">
+							<button type="button" class="popup__btn btn btn--gray">Добавить форму</button>
+						</div>
+					</form>
+					<div class="popup__btns">
+						<button type="button" class="popup__btn btn btn--red">Добавить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="popupPropertyTwo" aria-hidden="true" class="popup popup-property">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__inner">
+					<button data-close type="button" class="popup__close" style='--icon:url(../img/icon/13.svg)'></button>
+					<div class="popup__top">
+						<div class="popup__title _title">Крупногабаритное имущество</div>
+						<div class="popup__text">
+						</div>
+					</div>
+					<form action="#" class="popup__form ">
+						<div class="popup__row">
+							<div class="popup__column">
+								<div class="popup__column-top">
+									<div class="popup__column-title _title">1 имущество</div>
+									<button type="button" class="popup__column-close" style="--icon:url(../img/icon/13.svg)"></button>
+								</div>
+								<div class="popup__column-item form">
+									<div class="form__item">
+										<label class="form__label">Название</label>
+										<input autocomplete="off" type="text" name="form[]" data-error="Заполните поле" class="form__input input" data-required data-validate>
+										<div class="form__constructor">
+											<div class="form__quantity quantity">
+												<button type="button" class="quantity__button quantity__button_minus _active"></button>
+												<div class="quantity__input">
+													<input autocomplete="off" type="number" name="form[]" value="1">
+												</div>
+												<button type="button" class="quantity__button quantity__button_plus"></button>
+											</div>
+											<div class="form__value">Кол-во</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup__column">
+								<div class="popup__column-top">
+									<div class="popup__column-title _title">2 имущество</div>
+									<button type="button" class="popup__column-close" style="--icon:url(../img/icon/13.svg)"></button>
+								</div>
+								<div class="popup__column-item form">
+									<div class="form__item">
+										<label class="form__label">Название</label>
+										<input autocomplete="off" type="text" name="form[]" data-error="Заполните поле" class="form__input input" data-required data-validate>
+										<div class="form__constructor">
+											<div class="form__quantity quantity">
+												<button type="button" class="quantity__button quantity__button_minus _active"></button>
+												<div class="quantity__input">
+													<input autocomplete="off" type="number" name="form[]" value="1">
+												</div>
+												<button type="button" class="quantity__button quantity__button_plus"></button>
+											</div>
+											<div class="form__value">Кол-во</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="popup__btns">
+							<button type="button" class="popup__btn btn btn--gray">Добавить форму</button>
+						</div>
+					</form>
+					<div class="popup__btns">
+						<button type="button" class="popup__btn btn btn--red">Добавить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="popupPropertyTree" aria-hidden="true" class="popup popup-property">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__inner">
+					<button data-close type="button" class="popup__close" style='--icon:url(../img/icon/13.svg)'></button>
+					<div class="popup__top">
+						<div class="popup__title _title">Крупногабаритное имущество</div>
+						<div class="popup__text">
+						</div>
+					</div>
+					<form action="#" class="popup__form ">
+						<div class="popup__row">
+							<div class="popup__column">
+								<div class="popup__column-top">
+									<div class="popup__column-title _title">1 имущество</div>
+									<button type="button" class="popup__column-close" style="--icon:url(../img/icon/13.svg)"></button>
+								</div>
+								<div class="popup__column-item form">
+									<div class="form__item">
+										<label class="form__label">Название</label>
+										<input autocomplete="off" type="text" name="form[]" data-error="Заполните поле" class="form__input input" data-required data-validate>
+										<div class="form__constructor">
+											<div class="form__quantity quantity">
+												<button type="button" class="quantity__button quantity__button_minus _active"></button>
+												<div class="quantity__input">
+													<input autocomplete="off" type="number" name="form[]" value="1">
+												</div>
+												<button type="button" class="quantity__button quantity__button_plus"></button>
+											</div>
+											<div class="form__value">Кол-во</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup__column">
+								<div class="popup__column-top">
+									<div class="popup__column-title _title">2 имущество</div>
+									<button type="button" class="popup__column-close" style="--icon:url(../img/icon/13.svg)"></button>
+								</div>
+								<div class="popup__column-item form">
+									<div class="form__item">
+										<label class="form__label">Название</label>
+										<input autocomplete="off" type="text" name="form[]" data-error="Заполните поле" class="form__input input" data-required data-validate>
+										<div class="form__constructor">
+											<div class="form__quantity quantity">
+												<button type="button" class="quantity__button quantity__button_minus _active"></button>
+												<div class="quantity__input">
+													<input autocomplete="off" type="number" name="form[]" value="1">
+												</div>
+												<button type="button" class="quantity__button quantity__button_plus"></button>
+											</div>
+											<div class="form__value">Кол-во</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup__column">
+								<div class="popup__column-top">
+									<div class="popup__column-title _title">2 имущество</div>
+									<button type="button" class="popup__column-close" style="--icon:url(../img/icon/13.svg)"></button>
+								</div>
+								<div class="popup__column-item form">
+									<div class="form__item">
+										<label class="form__label">Название</label>
+										<input autocomplete="off" type="text" name="form[]" data-error="Заполните поле" class="form__input input" data-required data-validate>
+										<div class="form__constructor">
+											<div class="form__quantity quantity">
+												<button type="button" class="quantity__button quantity__button_minus _active"></button>
+												<div class="quantity__input">
+													<input autocomplete="off" type="number" name="form[]" value="1">
+												</div>
+												<button type="button" class="quantity__button quantity__button_plus"></button>
+											</div>
+											<div class="form__value">Кол-во</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="popup__btns">
+							<button type="button" class="popup__btn btn btn--gray">Добавить форму</button>
+						</div>
+					</form>
+					<div class="popup__btns popup__btns--two">
+						<button type="button" class="popup__btn btn btn--red">Сохранить</button>
+						<button type="button" class="popup__btn btn btn--gray">Удалить всё</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="popupDate" aria-hidden="true" class="popup popup-date">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__inner">
+					<button data-close type="button" class="popup__close" style='--icon:url(../img/icon/13.svg)'></button>
+					<div class="popup__top">
+						<div class="popup__title _title">Выберите дату и время</div>
+						<div class="popup__text">
+						</div>
+					</div>
+					<form action="#" class="popup__form">
+						<fieldset class="form__fieldset">
+							<div class="form__row form__row--date" style='--icon:url(../img/icon/14.svg)'>
+								<div class="form__item _active" data-hasdatepicker>
+									<input data-datepicker autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Выберите дату" value="Выберите дату" readonly class="input" id="datepicker">
+								</div>
+							</div>
+							<!-- <div class="datapicker__column" data-hasdatepicker>
+							<input data-datepicker autocomplete="off" type="text" name="form[]"
+								data-error="Ошибка" placeholder="" readonly class="input" id="datepicker">
+						</div> -->
+						</fieldset>
+						<div class="popup__btns">
+							<button type="button" class="popup__btn btn btn--red" data-close>Выбрать</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<template id="selects-template">
+		<div class="select-item" data-select="paid">
+			<div class="select-primary__title" data-select-title>
+				<div class="select-item__value" style='--icon:url(../img/icons/arrow-down.svg)'>Платные</div>
+			</div>
+			<form action="#" class="select-item__list" hidden>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+						<label for="c_1" class="checkbox__label"><span class="checkbox__text">Текст1</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="2" name="form[]">
+						<label for="c_2" class="checkbox__label"><span class="checkbox__text">Текст2</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3" name="form[]">
+						<label for="c_3" class="checkbox__label"><span class="checkbox__text">Текст3</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="4" name="form[]">
+						<label for="c_4" class="checkbox__label"><span class="checkbox__text">Текст4</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="5" name="form[]">
+						<label for="c_1" class="checkbox__label"><span class="checkbox__text">Текст</span></label>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="select-item" data-select="category">
+			<div class="select-primary__title" data-select-title>
+				<div class="select-item__value" style='--icon:url(../img/icons/arrow-down.svg)'>Категория</div>
+			</div>
+			<form action="#" class="select-item__list" hidden>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="11" name="form[]">
+						<label for="c_1" class="checkbox__label"><span class="checkbox__text">Текст1</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="12" name="form[]">
+						<label for="c_2" class="checkbox__label"><span class="checkbox__text">Текст2</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="13" name="form[]">
+						<label for="c_3" class="checkbox__label"><span class="checkbox__text">Текст3</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="14" name="form[]">
+						<label for="c_4" class="checkbox__label"><span class="checkbox__text">Текст4</span></label>
+					</div>
+				</div>
+				<div class="select-item__item">
+					<div class="checkbox">
+						<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="15" name="form[]">
+						<label for="c_1" class="checkbox__label"><span class="checkbox__text">Текст</span></label>
+					</div>
+				</div>
+			</form>
+		</div>
+	</template>
+	<template id="errors-code" data-fileMax="Количество загружаемых файлов не должно превышать 10" data-fileType="Не является изображением или видео" data-fileSize="Превышает максимальный объем файла в 3.5мб" data-size="3500000" data-max="10"></template>
+	<script src="js/app.min.js?_v=20231029203740"></script>
+
+
+</body>
+
+</html>
